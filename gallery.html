@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Heritage Detailing</title>
+    <style>
+        /* Shared Styles */
+        body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #121212; color: #ffffff; line-height: 1.6; }
+        header { background: #000; padding: 20px 5%; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; border-bottom: 2px solid #0056b3; }
+        header h1 { margin: 0; font-size: 26px; color: #fff; text-transform: uppercase; letter-spacing: 2px; }
+        nav { display: flex; gap: 20px; margin: 10px 0; }
+        nav a { color: #fff; text-decoration: none; font-size: 16px; font-weight: bold; transition: 0.3s; }
+        nav a:hover, nav a.active { color: #0056b3; }
+        .hero { text-align: center; padding: 60px 20px; background: #1a1a1a; border-bottom: 1px solid #333; }
+        .hero h2 { font-size: 40px; margin-bottom: 10px; color: #fff; }
+        .btn { background: #0056b3; color: #fff; padding: 10px 20px; text-decoration: none; font-size: 14px; border-radius: 5px; font-weight: bold; transition: 0.3s; display: inline-block; }
+        .btn:hover { background: #007bff; }
+        
+        /* Gallery Specific Styles */
+        .gallery-container { padding: 60px 5%; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .gallery-item { width: 100%; height: 300px; background-color: #333; border-radius: 8px; overflow: hidden; position: relative; }
+        
+        /* These are placeholder images - replace the URLs with your own photos later! */
+        .img-1 { background: url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover; }
+        .img-2 { background: url('https://images.unsplash.com/photo-1552930294-6b595f4c2974?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover; }
+        .img-3 { background: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover; }
+        .img-4 { background: url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover; }
+        .img-5 { background: url('https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover; }
+        .img-6 { background: url('https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover; }
+
+        footer { background: #000; text-align: center; padding: 40px 20px; border-top: 1px solid #333; margin-top: 50px; }
+        footer p { color: #aaa; font-size: 16px; margin: 5px 0; }
+        footer a { color: #007bff; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Heritage Detailing</h1>
+    <nav>
+        <a href="index.html">Services</a>
+        <a href="maintenance.html">Maintenance Club</a>
+        <a href="gallery.html" class="active">Gallery</a>
+    </nav>
+    <a href="#contact" class="btn">Contact Us</a>
+</header>
+
+<section class="hero">
+    <h2>Our Work</h2>
+    <p style="color: #aaa;">Swipe through some of our recent transformations and ceramic coating applications.</p>
+</section>
+
+<div class="gallery-container">
+    <div class="gallery-grid">
+        <!-- Gallery Images -->
+        <div class="gallery-item img-1"></div>
+        <div class="gallery-item img-2"></div>
+        <div class="gallery-item img-3"></div>
+        <div class="gallery-item img-4"></div>
+        <div class="gallery-item img-5"></div>
+        <div class="gallery-item img-6"></div>
+    </div>
+</div>
+
+<footer id="contact">
+    <h2>Contact Us</h2>
+    <p>Call or text us: <strong><a href="tel:07946673160">07946673160</a></strong></p>
+    <p>Email us: <strong><a href="mailto:HeritageDetailing@gmail.com">HeritageDetailing@gmail.com</a></strong></p>
+    <br>
+    <p style="font-size: 12px; color: #555;">&copy; 2023 Heritage Detailing. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+Note on the Gallery (gallery.html)
+Right now, the gallery uses professional stock photos of detailing to show you what it looks like. When you are ready to put your own photos on the website, you will just replace the web links inside the <style> section of gallery.html where it says url('...') with the links or file names of your actual pictures!
