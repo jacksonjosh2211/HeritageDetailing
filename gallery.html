@@ -1,185 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maintenance Club | Heritage Detailing</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Heritage Detailing</title>
+    <style>
+        /* Shared Styles */
+        body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #121212; color: #ffffff; line-height: 1.6; }
+        header { background: #000; padding: 20px 5%; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; border-bottom: 2px solid #0056b3; }
+        header h1 { margin: 0; font-size: 26px; color: #fff; text-transform: uppercase; letter-spacing: 2px; }
+        nav { display: flex; gap: 20px; margin: 10px 0; }
+        nav a { color: #fff; text-decoration: none; font-size: 16px; font-weight: bold; transition: 0.3s; }
+        nav a:hover, nav a.active { color: #0056b3; }
+        .hero { text-align: center; padding: 60px 20px; background: #1a1a1a; border-bottom: 1px solid #333; }
+        .hero h2 { font-size: 40px; margin-bottom: 10px; color: #fff; }
+        .btn { background: #0056b3; color: #fff; padding: 10px 20px; text-decoration: none; font-size: 14px; border-radius: 5px; font-weight: bold; transition: 0.3s; display: inline-block; }
+        .btn:hover { background: #007bff; }
+        
+        /* Gallery Specific Styles */
+        .gallery-container { padding: 60px 5%; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .gallery-item { width: 100%; height: 300px; background-color: #333; border-radius: 8px; overflow: hidden; position: relative; }
+        
+        /* These are placeholder images - replace the URLs with your own photos later! */
+        .img-1 { background: url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover; }
+        .img-2 { background: url('https://images.unsplash.com/photo-1552930294-6b595f4c2974?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover; }
+        .img-3 { background: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover; }
+        .img-4 { background: url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover; }
+        .img-5 { background: url('https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover; }
+        .img-6 { background: url('https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover; }
 
-<style>
-body {
-    margin: 0;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #0a0a0a;
-    color: #ffffff;
-}
-
-header {
-    background: #000;
-    padding: 20px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #222;
-}
-
-header h1 {
-    font-size: 24px;
-    letter-spacing: 2px;
-}
-
-nav a {
-    color: #ccc;
-    margin-left: 20px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover, nav a.active {
-    color: #d4af37;
-}
-
-.hero {
-    text-align: center;
-    padding: 80px 20px;
-    background: #111;
-}
-
-.hero h2 {
-    font-size: 42px;
-    color: #d4af37;
-}
-
-.hero p {
-    max-width: 700px;
-    margin: auto;
-    color: #aaa;
-}
-
-.club-container {
-    max-width: 800px;
-    margin: 60px auto;
-    padding: 40px;
-    background: #111;
-    border-radius: 10px;
-    border: 1px solid #222;
-    text-align: center;
-}
-
-.price-tag {
-    font-size: 48px;
-    margin: 20px 0;
-    color: #d4af37;
-}
-
-ul {
-    text-align: left;
-    max-width: 400px;
-    margin: 30px auto;
-    color: #ccc;
-    line-height: 2;
-}
-
-.benefits {
-    margin-top: 40px;
-    text-align: left;
-}
-
-.benefits li {
-    margin-bottom: 10px;
-}
-
-.location {
-    margin-top: 40px;
-    color: #aaa;
-}
-
-footer {
-    text-align: center;
-    padding: 40px;
-    border-top: 1px solid #222;
-    margin-top: 50px;
-}
-
-/* Sticky button */
-.sticky-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #d4af37;
-    color: #000;
-    padding: 15px 18px;
-    border-radius: 50%;
-    font-size: 20px;
-    text-decoration: none;
-}
-</style>
+        footer { background: #000; text-align: center; padding: 40px 20px; border-top: 1px solid #333; margin-top: 50px; }
+        footer p { color: #aaa; font-size: 16px; margin: 5px 0; }
+        footer a { color: #007bff; text-decoration: none; }
+    </style>
 </head>
-
 <body>
 
 <header>
-<h1>Heritage Detailing</h1>
-<nav>
-<a href="index.html">Services</a>
-<a href="maintenance.html" class="active">Maintenance</a>
-<a href="gallery.html">Gallery</a>
-</nav>
+    <h1>Heritage Detailing</h1>
+    <nav>
+        <a href="index.html">Services</a>
+        <a href="maintenance.html">Maintenance Club</a>
+        <a href="gallery.html" class="active">Gallery</a>
+    </nav>
+    <a href="#contact" class="btn">Contact Us</a>
 </header>
 
 <section class="hero">
-<h2>The Maintenance Club</h2>
-<p>Keep your car in pristine, showroom condition all year round with priority access and exclusive member benefits.</p>
+    <h2>Our Work</h2>
+    <p style="color: #aaa;">Swipe through some of our recent transformations and ceramic coating applications.</p>
 </section>
 
-<div class="club-container">
-
-<h3>Monthly Signature Detail</h3>
-
-<div class="price-tag">£150 <span style="font-size:20px;color:#777;">/ month</span></div>
-
-<p>
-Our Maintenance Club is designed for clients who want their vehicle kept in immaculate condition at all times without the hassle of booking.
-</p>
-
-<ul>
-<li>✔️ Snow foam pre-wash & hand wash</li>
-<li>✔️ Wheel deep clean & tar removal</li>
-<li>✔️ Monthly sealant protection</li>
-<li>✔️ Interior vacuum & wipe down</li>
-<li>✔️ Glass & plastics cleaned</li>
-<li>✔️ Seats & carpets refreshed</li>
-</ul>
-
-<div class="benefits">
-<h3 style="color:#d4af37;">Member Benefits</h3>
-<ul>
-<li>✔️ Priority booking (skip waiting lists)</li>
-<li>✔️ Exclusive member pricing</li>
-<li>✔️ Keeps your car in showroom condition year-round</li>
-<li>✔️ Saves money vs one-off detailing</li>
-<li>✔️ Limited spaces available</li>
-</ul>
-</div>
-
-<div class="location">
-<p>
-📍 We cover a 30-mile radius from Horsham, bringing premium detailing directly to your home or workplace.
-</p>
-</div>
-
-<a href="#contact" style="background:#d4af37; color:#000; padding:15px 25px; text-decoration:none; display:inline-block; margin-top:30px;">
-Join the Club
-</a>
-
+<div class="gallery-container">
+    <div class="gallery-grid">
+        <!-- Gallery Images -->
+        <div class="gallery-item img-1"></div>
+        <div class="gallery-item img-2"></div>
+        <div class="gallery-item img-3"></div>
+        <div class="gallery-item img-4"></div>
+        <div class="gallery-item img-5"></div>
+        <div class="gallery-item img-6"></div>
+    </div>
 </div>
 
 <footer id="contact">
-<p>Call: 07946673160</p>
-<p>Email: HeritageDetailing@gmail.com</p>
+    <h2>Contact Us</h2>
+    <p>Call or text us: <strong><a href="tel:07946673160">07946673160</a></strong></p>
+    <p>Email us: <strong><a href="mailto:HeritageDetailing@gmail.com">HeritageDetailing@gmail.com</a></strong></p>
+    <br>
+    <p style="font-size: 12px; color: #555;">&copy; 2023 Heritage Detailing. All rights reserved.</p>
 </footer>
-
-<!-- Sticky Contact Button -->
-<a href="tel:07946673160" class="sticky-btn">📞</a>
 
 </body>
 </html>
