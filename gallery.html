@@ -23,7 +23,6 @@
     .gallery-item { width: 100%; height: 300px; border-radius: 10px; overflow: hidden; position: relative; box-shadow: 0 8px 20px rgba(255,204,0,0.3); transition: transform 0.3s, box-shadow 0.3s; }
     .gallery-item:hover { transform: scale(1.03); box-shadow: 0 12px 30px rgba(255,204,0,0.5); }
 
-    /* Replace with your real images */
     .img-1 { background: url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover no-repeat; }
     .img-2 { background: url('https://images.unsplash.com/photo-1552930294-6b595f4c2974?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover no-repeat; }
     .img-3 { background: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover no-repeat; }
@@ -35,12 +34,71 @@
     .testimonial-section h3 { text-align: center; font-size: 32px; color: #ffcc00; margin-bottom: 40px; }
     .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
     .testimonial-card { background: #121212; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(255,204,0,0.2); }
-    .testimonial-card p { color: #ccc; font-size: 16px; line-height: 1.6; }
-    .testimonial-card h4 { color: #ffcc00; font-size: 18px; margin-top: 15px; }
+    .testimonial-card p { color: #ccc; }
+    .testimonial-card h4 { color: #ffcc00; margin-top: 15px; }
+
+    /* BOOKING FORM */
+    .booking-section {
+        max-width: 800px;
+        margin: 60px auto;
+        padding: 50px 5%;
+        background: #1e1e1e;
+        border-radius: 10px;
+        border-top: 4px solid #ffcc00;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(255,204,0,0.2);
+    }
+
+    .booking-section h2 {
+        font-size: 32px;
+        color: #ffcc00;
+    }
+
+    .booking-section p {
+        color: #ccc;
+        margin-bottom: 25px;
+    }
+
+    .booking-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .booking-form input,
+    .booking-form textarea {
+        padding: 15px;
+        border-radius: 5px;
+        border: none;
+        background: #121212;
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .booking-form input:focus,
+    .booking-form textarea:focus {
+        outline: 2px solid #ffcc00;
+    }
+
+    .booking-form button {
+        background: #ffcc00;
+        color: #000;
+        padding: 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .booking-form button:hover {
+        background: #e6b800;
+    }
 
     footer { background: #000; text-align: center; padding: 40px 20px; border-top: 1px solid #333; margin-top: 50px; }
-    footer p { color: #aaa; font-size: 16px; margin: 5px 0; }
-    footer a { color: #ffcc00; text-decoration: none; }
+    footer p { color: #aaa; }
+    footer a { color: #ffcc00; }
 </style>
 </head>
 <body>
@@ -75,18 +133,36 @@
     <h3>What Our Clients Say</h3>
     <div class="testimonial-grid">
         <div class="testimonial-card">
-            <p>"Absolutely stunning results! My car looks showroom ready every time. Heritage Detailing is worth every penny."</p>
+            <p>"Absolutely stunning results! My car looks showroom ready every time."</p>
             <h4>- James W.</h4>
         </div>
         <div class="testimonial-card">
-            <p>"Professional, reliable, and the gold standard in detailing. Their ceramic coating transformed my paintwork."</p>
+            <p>"Professional, reliable, and the gold standard in detailing."</p>
             <h4>- Sophie L.</h4>
         </div>
         <div class="testimonial-card">
-            <p>"High-end service with attention to every detail. Highly recommended for anyone who loves their car."</p>
+            <p>"High-end service with attention to every detail."</p>
             <h4>- Michael R.</h4>
         </div>
     </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="booking-section">
+    <h2>Book a Detail</h2>
+    <p>Fill out the form below and we’ll get back to you to confirm your booking.</p>
+
+    <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST" class="booking-form">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <textarea name="message" placeholder="Tell us your car type, service required, and any details..." rows="5" required></textarea>
+        <button type="submit">Request Booking</button>
+    </form>
+
+    <p style="margin-top:20px; font-size:14px; color:#888;">
+        Or call/text us for a faster response: <strong>07946673160</strong>
+    </p>
 </section>
 
 <footer id="contact">
