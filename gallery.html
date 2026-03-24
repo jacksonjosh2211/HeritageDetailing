@@ -5,102 +5,88 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gallery | Diamond Detailing</title>
 <style>
-    body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #121212; color: #ffffff; line-height: 1.6; }
-    header { background: #000; padding: 20px 5%; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; border-bottom: 2px solid #ffcc00; }
-    header h1 { margin: 0; font-size: 26px; color: #fff; text-transform: uppercase; letter-spacing: 2px; }
-    nav { display: flex; gap: 20px; margin: 10px 0; }
-    nav a { color: #fff; text-decoration: none; font-size: 16px; font-weight: bold; transition: 0.3s; }
-    nav a:hover, nav a.active { color: #ffcc00; }
-    .hero { text-align: center; padding: 60px 20px; background: #1a1a1a; border-bottom: 1px solid #333; }
-    .hero h2 { font-size: 40px; margin-bottom: 10px; color: #ffcc00; }
-    .hero p { color: #ccc; font-size: 18px; max-width: 700px; margin: 0 auto; }
+body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #121212; color: #ffffff; line-height: 1.6; }
+header { background: #000; padding: 20px 5%; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; border-bottom: 2px solid #ffcc00; }
+header h1 { margin: 0; font-size: 26px; color: #fff; text-transform: uppercase; letter-spacing: 2px; }
+nav { display: flex; gap: 20px; margin: 10px 0; }
+nav a { color: #fff; text-decoration: none; font-size: 16px; font-weight: bold; transition: 0.3s; }
+nav a:hover, nav a.active { color: #ffcc00; }
+.hero { text-align: center; padding: 60px 20px; background: #1a1a1a; border-bottom: 1px solid #333; }
+.hero h2 { font-size: 40px; margin-bottom: 10px; color: #ffcc00; }
+.hero p { color: #ccc; font-size: 18px; max-width: 700px; margin: 0 auto; }
 
-    .btn { background: #ffcc00; color: #000; padding: 12px 25px; text-decoration: none; font-size: 16px; border-radius: 5px; font-weight: bold; transition: 0.3s; display: inline-block; }
-    .btn:hover { background: #e6b800; }
+.btn { background: #ffcc00; color: #000; padding: 12px 25px; text-decoration: none; font-size: 16px; border-radius: 5px; font-weight: bold; transition: 0.3s; display: inline-block; }
+.btn:hover { background: #e6b800; }
 
-    .gallery-container { padding: 60px 5%; }
-    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-    .gallery-item { width: 100%; height: 300px; border-radius: 10px; overflow: hidden; position: relative; box-shadow: 0 8px 20px rgba(255,204,0,0.3); transition: transform 0.3s, box-shadow 0.3s; }
-    .gallery-item:hover { transform: scale(1.03); box-shadow: 0 12px 30px rgba(255,204,0,0.5); }
+.gallery-container { padding: 60px 5%; }
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+.gallery-item { width: 100%; height: 300px; border-radius: 10px; overflow: hidden; position: relative; box-shadow: 0 8px 20px rgba(255,204,0,0.3); transition: transform 0.3s, box-shadow 0.3s; }
+.gallery-item:hover { transform: scale(1.03); box-shadow: 0 12px 30px rgba(255,204,0,0.5); }
 
-    .img-1 { background: url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover no-repeat; }
-    .img-2 { background: url('https://images.unsplash.com/photo-1552930294-6b595f4c2974?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover no-repeat; }
-    .img-3 { background: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover no-repeat; }
-    .img-4 { background: url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover no-repeat; }
-    .img-5 { background: url('https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover no-repeat; }
-    .img-6 { background: url('https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover no-repeat; }
+.img-1 { background: url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover no-repeat; }
+.img-2 { background: url('https://images.unsplash.com/photo-1552930294-6b595f4c2974?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover no-repeat; }
+.img-3 { background: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover no-repeat; }
+.img-4 { background: url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover no-repeat; }
+.img-5 { background: url('https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover no-repeat; }
+.img-6 { background: url('https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover no-repeat; }
 
-    .testimonial-section { background: #1e1e1e; padding: 60px 5%; margin-top: 50px; border-top: 4px solid #ffcc00; }
-    .testimonial-section h3 { text-align: center; font-size: 32px; color: #ffcc00; margin-bottom: 40px; }
-    .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-    .testimonial-card { background: #121212; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(255,204,0,0.2); }
-    .testimonial-card p { color: #ccc; }
-    .testimonial-card h4 { color: #ffcc00; margin-top: 15px; }
+.testimonial-section { background: #1e1e1e; padding: 60px 5%; margin-top: 50px; border-top: 4px solid #ffcc00; }
+.testimonial-section h3 { text-align: center; font-size: 32px; color: #ffcc00; margin-bottom: 40px; }
+.testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.testimonial-card { background: #121212; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(255,204,0,0.2); }
+.testimonial-card p { color: #ccc; }
+.testimonial-card h4 { color: #ffcc00; margin-top: 15px; }
 
-    /* BOOKING FORM */
-    .booking-section {
-        max-width: 800px;
-        margin: 60px auto;
-        padding: 50px 5%;
-        background: #1e1e1e;
-        border-radius: 10px;
-        border-top: 4px solid #ffcc00;
-        text-align: center;
-        box-shadow: 0 4px 20px rgba(255,204,0,0.2);
-    }
+/* BOOKING FORM */
+.booking-section {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 50px 5%;
+    background: #1e1e1e;
+    border-radius: 10px;
+    border-top: 4px solid #ffcc00;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(255,204,0,0.2);
+}
 
-    .booking-section h2 {
-        font-size: 32px;
-        color: #ffcc00;
-    }
+.booking-section h2 {
+    font-size: 32px;
+    color: #ffcc00;
+}
 
-    .booking-section p {
-        color: #ccc;
-        margin-bottom: 25px;
-    }
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
-    .booking-form {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
+.booking-form input,
+.booking-form textarea {
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background: #121212;
+    color: #fff;
+    font-size: 16px;
+}
 
-    .booking-form input,
-    .booking-form textarea {
-        padding: 15px;
-        border-radius: 5px;
-        border: none;
-        background: #121212;
-        color: #fff;
-        font-size: 16px;
-    }
+.booking-form button {
+    background: #ffcc00;
+    color: #000;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
-    .booking-form input:focus,
-    .booking-form textarea:focus {
-        outline: 2px solid #ffcc00;
-    }
-
-    .booking-form button {
-        background: #ffcc00;
-        color: #000;
-        padding: 15px;
-        border: none;
-        border-radius: 5px;
-        font-size: 18px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: 0.3s;
-    }
-
-    .booking-form button:hover {
-        background: #e6b800;
-    }
-
-    footer { background: #000; text-align: center; padding: 40px 20px; border-top: 1px solid #333; margin-top: 50px; }
-    footer p { color: #aaa; }
-    footer a { color: #ffcc00; }
+footer { background: #000; text-align: center; padding: 40px 20px; border-top: 1px solid #333; margin-top: 50px; }
+footer p { color: #aaa; }
+footer a { color: #ffcc00; }
 </style>
 </head>
+
 <body>
 
 <header>
@@ -129,46 +115,26 @@
     </div>
 </div>
 
-<section class="testimonial-section">
-    <h3>What Our Clients Say</h3>
-    <div class="testimonial-grid">
-        <div class="testimonial-card">
-            <p>"Absolutely stunning results! My car looks showroom ready every time."</p>
-            <h4>- James W.</h4>
-        </div>
-        <div class="testimonial-card">
-            <p>"Professional, reliable, and the gold standard in detailing."</p>
-            <h4>- Sophie L.</h4>
-        </div>
-        <div class="testimonial-card">
-            <p>"High-end service with attention to every detail."</p>
-            <h4>- Michael R.</h4>
-        </div>
-    </div>
-</section>
-
 <!-- BOOKING FORM -->
 <section class="booking-section">
     <h2>Book a Detail</h2>
-    <p>Fill out the form below and we’ll get back to you to confirm your booking.</p>
 
+    <!-- ⚠️ REPLACE YOUR-FORM-ID -->
     <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST" class="booking-form">
+        <input type="hidden" name="_replyto" value="optimal.car.detailers.uk@gmail.com">
+
         <input type="text" name="name" placeholder="Full Name" required>
         <input type="email" name="email" placeholder="Email Address" required>
         <input type="tel" name="phone" placeholder="Phone Number" required>
         <textarea name="message" placeholder="Tell us your car type, service required, and any details..." rows="5" required></textarea>
         <button type="submit">Request Booking</button>
     </form>
-
-    <p style="margin-top:20px; font-size:14px; color:#888;">
-        Or call/text us for a faster response: <strong>07946673160</strong>
-    </p>
 </section>
 
 <footer id="contact">
     <h2>Contact Us</h2>
     <p>Call or text us: <strong><a href="tel:07946673160">07946673160</a></strong></p>
-    <p>Email us: <strong><a href="mailto:diamond.detailing.ukk@gmail.com">diamond.detailing.ukk@gmail.com</a></strong></p>
+    <p>Email us: <strong><a href="mailto:optimal.car.detailers.uk@gmail.com">optimal.car.detailers.uk@gmail.com</a></strong></p>
     <br>
     <p style="font-size: 12px; color: #555;">&copy; 2026 Diamond Detailing. All rights reserved.</p>
 </footer>
