@@ -65,6 +65,37 @@ nav a:hover, nav a.active { color: #ffcc00; }
     cursor: pointer;
 }
 
+/* TESTIMONIALS */
+.testimonial-section {
+    background: #1e1e1e;
+    padding: 60px 5%;
+    margin-top: 50px;
+    border-top: 4px solid #ffcc00;
+}
+
+.testimonial-section h3 {
+    text-align: center;
+    font-size: 32px;
+    color: #ffcc00;
+    margin-bottom: 40px;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: #121212;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255,204,0,0.2);
+}
+
+.testimonial-card p { color: #ccc; }
+.testimonial-card h4 { color: #ffcc00; margin-top: 15px; }
+
 footer { background: #000; text-align: center; padding: 40px 20px; border-top: 1px solid #333; margin-top: 50px; }
 footer p { color: #aaa; }
 footer a { color: #ffcc00; }
@@ -97,6 +128,24 @@ footer a { color: #ffcc00; }
         <div class="gallery-item img-6"></div>
     </div>
 </div>
+
+<section class="testimonial-section">
+    <h3>What Our Clients Say</h3>
+    <div class="testimonial-grid">
+        <div class="testimonial-card">
+            <p>"Absolutely stunning results! My car looks showroom ready every time."</p>
+            <h4>- James W.</h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"Professional, reliable, and the gold standard in detailing."</p>
+            <h4>- Sophie L.</h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"High-end service with attention to every detail."</p>
+            <h4>- Michael R.</h4>
+        </div>
+    </div>
+</section>
 
 <section class="booking-section">
     <h2>Book a Detail</h2>
