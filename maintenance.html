@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Optimal Car Detailers | Premium Mobile Detailing</title>
+<title>Maintenance Club | Diamond Detailing</title>
 
 <style>
 body {
@@ -34,19 +34,19 @@ nav a {
     font-weight: bold;
 }
 
-nav a:hover {
+nav a:hover, nav a.active {
     color: #d4af37;
 }
 
 .hero {
     text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)),
-    url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785') center/cover;
+    padding: 80px 20px;
+    background: #111;
 }
 
 .hero h2 {
-    font-size: 48px;
+    font-size: 42px;
+    color: #d4af37;
 }
 
 .hero p {
@@ -55,66 +55,42 @@ nav a:hover {
     color: #aaa;
 }
 
-.services {
-    padding: 60px 5%;
-}
-
-.offer {
-    background: linear-gradient(90deg, #d4af37, #b8962e);
-    color: #000;
-    padding: 15px;
-    text-align: center;
-    border-radius: 6px;
-    margin-bottom: 40px;
-    font-weight: bold;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.card {
+.club-container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px;
     background: #111;
-    padding: 30px;
     border-radius: 10px;
     border: 1px solid #222;
-    transition: 0.3s;
+    text-align: center;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    border-color: #d4af37;
-}
-
-.card h3 {
+.price-tag {
+    font-size: 48px;
+    margin: 20px 0;
     color: #d4af37;
 }
 
-.price {
-    font-size: 22px;
-    margin: 10px 0;
-    font-weight: bold;
-}
-
-.card ul {
-    padding-left: 18px;
+ul {
+    text-align: left;
+    max-width: 400px;
+    margin: 30px auto;
     color: #ccc;
+    line-height: 2;
 }
 
-.card ul li {
-    margin-bottom: 6px;
-    font-size: 14px;
+.benefits {
+    margin-top: 40px;
+    text-align: left;
 }
 
-.info-section {
-    margin-top: 60px;
-    max-width: 800px;
+.benefits li {
+    margin-bottom: 10px;
 }
 
-.info-section h3 {
-    color: #d4af37;
+.location {
+    margin-top: 40px;
+    color: #aaa;
 }
 
 footer {
@@ -123,124 +99,88 @@ footer {
     border-top: 1px solid #222;
     margin-top: 50px;
 }
+
+/* Sticky button */
+.sticky-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #d4af37;
+    color: #000;
+    padding: 15px 18px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>Optimal Car Detailers</h1>
+<h1>Diamond Detailing</h1>
 <nav>
 <a href="index.html">Services</a>
-<a href="maintenance.html">Maintenance</a>
+<a href="maintenance.html" class="active">Maintenance</a>
 <a href="gallery.html">Gallery</a>
 </nav>
 </header>
 
 <section class="hero">
-<h2>Luxury Detailing. Delivered to You.</h2>
-<p>We restore, enhance, and protect your vehicle with premium detailing services designed to deliver showroom-level results every time.</p>
+<h2>The Maintenance Club</h2>
+<p>Keep your car in pristine, showroom condition all year round with priority access and exclusive member benefits.</p>
 </section>
 
-<section class="services">
+<div class="club-container">
 
-<div class="offer">
-🎉 Special Offers: First-time customers enjoy <strong>20% OFF</strong> their first detail! Plus, refer a friend and receive <strong>10% OFF</strong> any wash. Keep your car pristine and save while you do it!
-</div>
+<h3>Monthly Signature Detail</h3>
 
-<div class="grid">
+<div class="price-tag">£150 <span style="font-size:20px;color:#777;">/ month</span></div>
 
-<div class="card">
-<h3>Level 1: Signature Detail</h3>
-<div class="price">from £150 (price may vary depending on vehicle)</div>
-<ul>
-<li>Snow foam pre-wash & full decontamination wash</li>
-<li>2 bucket safe hand wash</li>
-<li>Wheels, arches & shuts fully cleaned</li>
-<li>Engine bay cleaned, dried & dressed</li>
-<li>Soft top roof cleaned (if applicable)</li>
-<li>Full body air dry</li>
-<li>Tyres, glass & plastics dressed</li>
-<li>Localised machine polish</li>
-<li>Premium wax (6–12 months protection)</li>
-<li>Full interior vacuum & extraction</li>
-<li>Seats, carpets & mats shampooed</li>
-<li>Leather professionally cleaned & protected</li>
-<li>Interior steam cleaned & dressed</li>
-<li>Air freshener applied</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Level 2: Deep Decontamination</h3>
-<div class="price">£250 – £345 (price may vary depending on vehicle)</div>
-<ul>
-<li>Everything included in Level 1</li>
-<li>Iron fallout remover</li>
-<li>Tar removal treatment</li>
-<li>Clay bar decontamination</li>
-<li>Engine bay deep clean</li>
-<li>Intensive wheel clean</li>
-<li>Durable paint sealant applied</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Level 3: Paint Enhancement</h3>
-<div class="price">£400 – £595 (price may vary depending on vehicle)</div>
-<ul>
-<li>Everything from Level 1 & 2</li>
-<li>Full decontamination process</li>
-<li>Machine polish</li>
-<li>Removes light swirls & haze</li>
-<li>Enhances gloss and depth</li>
-<li>Sealant protection applied</li>
-<li>Removes majority of swirls & holograms</li>
-<li>Corrects scratches not deeper than fingernail</li>
-</ul>
-<p style="color:#aaa; font-size:14px;">
-An in-depth paint enhancement designed to significantly restore clarity, depth, and overall finish.
-</p>
-</div>
-
-<div class="card">
-<h3>Level 4: Correction & Ceramic</h3>
-<div class="price">£650+ (price may vary depending on vehicle)</div>
-<ul>
-<li>Everything included in Levels 1, 2 & 3</li>
-<li>Full paintwork decontamination</li>
-<li>Single-stage machine polish</li>
-<li>Swirl and defect removal</li>
-<li>1-year ceramic coating protection</li>
-</ul>
-<p style="color:#aaa; font-size:14px;">
-A full-day package designed to restore your paintwork and lock in a high-gloss finish with durable ceramic protection.
-</p>
-</div>
-
-</div>
-
-<div class="info-section">
-
-<h3>Emergency Call Outs</h3>
 <p>
-We offer emergency call-out detailing services. Pricing depends on the time, vehicle, and level of detail required. Contact us directly for a fast quote.
+Our Maintenance Club is designed for clients who want their vehicle kept in immaculate condition at all times without the hassle of booking.
 </p>
 
-<h3>Booking Deposit</h3>
+<ul>
+<li>✔️ Snow foam pre-wash & hand wash</li>
+<li>✔️ Wheel deep clean & tar removal</li>
+<li>✔️ Monthly sealant protection</li>
+<li>✔️ Interior vacuum & wipe down</li>
+<li>✔️ Glass & plastics cleaned</li>
+<li>✔️ Seats & carpets refreshed</li>
+</ul>
+
+<div class="benefits">
+<h3 style="color:#d4af37;">Member Benefits</h3>
+<ul>
+<li>✔️ Priority booking (skip waiting lists)</li>
+<li>✔️ Exclusive member pricing</li>
+<li>✔️ Keeps your car in showroom condition year-round</li>
+<li>✔️ Saves money vs one-off detailing</li>
+<li>✔️ Limited spaces available</li>
+</ul>
+</div>
+
+<div class="location">
 <p>
-A £75 deposit is required to secure all Level 1–4 bookings.
+📍 We cover a 30-mile radius from Horsham, bringing premium detailing directly to your home or workplace.
 </p>
+</div>
+
+<a href="#contact" style="background:#d4af37; color:#000; padding:15px 25px; text-decoration:none; display:inline-block; margin-top:30px;">
+Join the Club
+</a>
 
 </div>
 
-</section>
-
-<footer>
+<footer id="contact">
 <p>Call: 07946673160</p>
-<p>Email: yournewemail@example.com</p>
-<p style="font-size: 12px; color: #555;">&copy; 2026 Optimal Car Detailers</p>
+<p>Email: optimal.car.detailers.uk@gmail.com</p>
+<p style="font-size: 12px; color: #555;">&copy; 2026 Diamond Detailing</p>
 </footer>
+
+<!-- Sticky Contact Button -->
+<a href="tel:07946673160" class="sticky-btn">📞</a>
 
 </body>
 </html>
