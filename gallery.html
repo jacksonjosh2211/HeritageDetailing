@@ -150,7 +150,11 @@ footer a { color: #ffcc00; }
 <section class="booking-section">
     <h2>Book a Detail</h2>
     <form action="https://formspree.io/f/meqwbyvj" method="POST" class="booking-form">
-        <!-- Formspree will send submissions to optimal.car.detailers.uk@gmail.com -->
+        <!-- Sends booking request to optimal.car.detailers.uk@gmail.com via Formspree -->
+        <input type="hidden" name="_next" value="https://optimalcardetailers.uk/thank-you.html">
+        <input type="hidden" name="_subject" value="New Booking Request">
+        <input type="hidden" name="_gotcha" style="display:none">
+        
         <input type="text" name="name" placeholder="Full Name" required>
         <input type="email" name="email" placeholder="Email Address" required>
         <input type="tel" name="phone" placeholder="Phone Number" required>
