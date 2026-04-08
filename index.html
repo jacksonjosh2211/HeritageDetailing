@@ -4,18 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Optimal Car Detailers | Premium Mobile Detailing</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
-<style>
-  body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #0a0a0a;
-    color: #fff;
-  }
 
-  /* Header */
-  header {
+<!-- AOS Library for scroll animations -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+}
+
+/* Header */
+header {
     background: #000;
     padding: 15px 5%;
     display: flex;
@@ -25,75 +27,73 @@
     position: sticky;
     top: 0;
     z-index: 100;
-  }
+}
 
-  header img {
+header img {
     height: 55px;
-  }
+}
 
-  nav a {
+nav a {
     color: #ccc;
     margin-left: 20px;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
-  }
+}
 
-  nav a:hover {
+nav a:hover {
     color: #d4af37;
-  }
+}
 
-  /* Hero Section */
-  .hero {
-    position: relative;
+/* Hero Section */
+.hero {
     text-align: center;
     padding: 100px 20px;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
-      url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785') center/cover;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)),
+    url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785') center/cover;
+    position: relative;
     overflow: hidden;
-  }
+}
 
-  .hero-logo {
+.hero-logo {
     width: 180px;
     margin-bottom: 20px;
     animation: fadeInDown 1s ease forwards;
-  }
+}
 
-  .hero h2 {
+.hero h2 {
     font-size: 48px;
     color: #d4af37;
     margin-bottom: 15px;
-    animation: fadeInUp 1s ease forwards;
-    animation-delay: 0.5s;
     opacity: 0;
-  }
+    animation: fadeInUp 1s forwards 0.5s;
+}
 
-  .hero p {
+.hero p {
     max-width: 700px;
     margin: auto;
     color: #aaa;
     font-size: 1.2rem;
-    animation: fadeInUp 1s ease forwards;
-    animation-delay: 0.7s;
     opacity: 0;
-  }
+    animation: fadeInUp 1s forwards 0.7s;
+}
 
-  @keyframes fadeInDown {
+@keyframes fadeInDown {
     0% { opacity: 0; transform: translateY(-50px);}
     100% { opacity: 1; transform: translateY(0);}
-  }
+}
 
-  @keyframes fadeInUp {
+@keyframes fadeInUp {
     0% { opacity: 0; transform: translateY(50px);}
     100% { opacity: 1; transform: translateY(0);}
-  }
+}
 
-  /* Services Section */
-  .services {
+/* Services */
+.services {
     padding: 60px 5%;
-  }
+}
 
-  .offer {
+.offer {
     background: linear-gradient(90deg, #d4af37, #b8962e);
     color: #000;
     padding: 15px;
@@ -102,102 +102,95 @@
     margin-bottom: 40px;
     font-weight: bold;
     transition: transform 0.3s ease;
-  }
+}
 
-  .offer:hover {
+.offer:hover {
     transform: scale(1.02);
-  }
+}
 
-  .vehicle-types {
+/* Vehicle Types Display */
+.vehicle-types {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 40px;
-  }
-
-  .vehicle-types button {
-    background: #111;
-    border: 2px solid #d4af37;
     color: #d4af37;
-    margin: 5px;
-    padding: 10px 25px;
-    cursor: pointer;
     font-weight: bold;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-  }
+}
 
-  .vehicle-types button.active, 
-  .vehicle-types button:hover {
-    background: #d4af37;
-    color: #111;
-  }
+.vehicle-types span {
+    margin: 0 15px;
+    padding: 5px 10px;
+    border: 1px solid #d4af37;
+    border-radius: 20px;
+    font-size: 1rem;
+}
 
-  .grid {
+/* Grid and Cards */
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-  }
+}
 
-  .card {
+.card {
     background: #111;
-    padding: 25px;
-    border-radius: 12px;
+    padding: 30px;
+    border-radius: 10px;
     border: 1px solid #222;
-    transition: 0.3s;
-  }
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
 
-  .card:hover {
+.card:hover {
     transform: translateY(-8px);
     border-color: #d4af37;
     box-shadow: 0 10px 20px rgba(212,175,55,0.3);
-  }
+}
 
-  .card h3 {
+.card h3 {
     color: #d4af37;
-    margin-top: 0;
-  }
+}
 
-  .price {
-    font-size: 20px;
+.price {
+    font-size: 22px;
     margin: 10px 0;
     font-weight: bold;
-  }
+}
 
-  .card ul {
+.card ul {
     padding-left: 18px;
     color: #ccc;
-  }
+}
 
-  .card ul li {
+.card ul li {
     margin-bottom: 6px;
     font-size: 14px;
-  }
+}
 
-  .info-section {
+/* Info Section */
+.info-section {
     margin-top: 60px;
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-  }
+}
 
-  .info-section h3 {
+.info-section h3 {
     color: #d4af37;
-  }
+}
 
-  footer {
+/* Footer */
+footer {
     text-align: center;
     padding: 40px;
     border-top: 1px solid #222;
     margin-top: 50px;
     color: #d4af37;
-  }
+}
 
-  @media(max-width:768px){
+/* Responsive */
+@media(max-width:768px){
     .hero h2 { font-size: 36px; }
     .hero p { font-size: 1rem; }
-  }
+}
 </style>
 </head>
 
@@ -206,8 +199,9 @@
 <header>
 <img src="images/logo.png" alt="Optimal Car Detailers Logo">
 <nav>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
+<a href="index.html">Services</a>
+<a href="maintenance.html">Maintenance</a>
+<a href="gallery.html">Gallery</a>
 </nav>
 </header>
 
@@ -217,94 +211,113 @@
 <p>We restore, enhance, and protect your vehicle with premium detailing services designed to deliver showroom-level results every time.</p>
 </section>
 
-<section class="services" id="services">
+<section class="services">
 <div class="offer">
-🎉 First-time customers enjoy <strong>20% OFF</strong>! Refer a friend and get <strong>10% OFF</strong>.
+🎉 Special Offers: First-time customers enjoy <strong>20% OFF</strong> their first detail! Plus, refer a friend and receive <strong>10% OFF</strong> any wash. Keep your car pristine and save while you do it!
 </div>
 
+<!-- Vehicle Types Static Display -->
 <div class="vehicle-types">
-<button class="active" data-type="saloon">Saloon / Hatch</button>
-<button data-type="pickup">Pickup</button>
-<button data-type="suv">SUV</button>
-<button data-type="van">Minibus / Van</button>
+    <span>Saloon / Hatch</span>
+    <span>Pickup</span>
+    <span>SUV</span>
+    <span>Minibus / Van</span>
 </div>
 
 <div class="grid">
-  <!-- Sample card -->
-  <div class="card" data-vehicle="saloon" data-aos="fade-up">
-    <h3>Level 1: Signature Detail</h3>
-    <div class="price">from £150</div>
-    <ul>
-      <li>Snow foam pre-wash & full decontamination wash</li>
-      <li>2 bucket safe hand wash</li>
-      <li>Wheels, arches & shuts fully cleaned</li>
-      <li>Engine bay cleaned, dried & dressed</li>
-      <li>Full body air dry</li>
-      <li>Premium wax (6–12 months protection)</li>
-    </ul>
-  </div>
+<!-- Level 1 Card -->
+<div class="card" data-aos="fade-up">
+<h3>Level 1: Signature Detail</h3>
+<div class="price">from £150 (price may vary depending on vehicle)</div>
+<ul>
+<li>Snow foam pre-wash & full decontamination wash</li>
+<li>2 bucket safe hand wash</li>
+<li>Wheels, arches & shuts fully cleaned</li>
+<li>Engine bay cleaned, dried & dressed</li>
+<li>Soft top roof cleaned (if applicable)</li>
+<li>Full body air dry</li>
+<li>Tyres, glass & plastics dressed</li>
+<li>Localised machine polish</li>
+<li>Premium wax (6–12 months protection)</li>
+<li>Full interior vacuum & extraction</li>
+<li>Seats, carpets & mats shampooed</li>
+<li>Leather professionally cleaned & protected</li>
+<li>Interior steam cleaned & dressed</li>
+<li>Air freshener applied</li>
+</ul>
+</div>
 
-  <div class="card" data-vehicle="saloon" data-aos="fade-up">
-    <h3>Level 2: Deep Decontamination</h3>
-    <div class="price">£250 – £345</div>
-    <ul>
-      <li>Everything included in Level 1</li>
-      <li>Iron fallout remover & tar treatment</li>
-      <li>Clay bar decontamination</li>
-      <li>Engine bay deep clean</li>
-      <li>Durable paint sealant applied</li>
-    </ul>
-  </div>
+<!-- Level 2 Card -->
+<div class="card" data-aos="fade-up">
+<h3>Level 2: Deep Decontamination</h3>
+<div class="price">£250 – £345 (price may vary depending on vehicle)</div>
+<ul>
+<li>Everything included in Level 1</li>
+<li>Iron fallout remover</li>
+<li>Tar removal treatment</li>
+<li>Clay bar decontamination</li>
+<li>Engine bay deep clean</li>
+<li>Intensive wheel clean</li>
+<li>Durable paint sealant applied</li>
+</ul>
+</div>
 
-  <div class="card" data-vehicle="saloon" data-aos="fade-up">
-    <h3>Level 3: Paint Enhancement</h3>
-    <div class="price">£400 – £595</div>
-    <ul>
-      <li>Everything from Level 1 & 2</li>
-      <li>Machine polish & scratch removal</li>
-      <li>Enhances gloss and depth</li>
-      <li>Sealant protection applied</li>
-    </ul>
-  </div>
+<!-- Level 3 Card -->
+<div class="card" data-aos="fade-up">
+<h3>Level 3: Paint Enhancement</h3>
+<div class="price">£400 – £595 (price may vary depending on vehicle)</div>
+<ul>
+<li>Everything from Level 1 & 2</li>
+<li>Full decontamination process</li>
+<li>Machine polish</li>
+<li>Removes light swirls & haze</li>
+<li>Enhances gloss and depth</li>
+<li>Sealant protection applied</li>
+<li>Removes majority of swirls & holograms</li>
+<li>Corrects scratches not deeper than fingernail</li>
+</ul>
+<p style="color:#aaa; font-size:14px;">
+An in-depth paint enhancement designed to significantly restore clarity, depth, and overall finish.
+</p>
+</div>
+
+<!-- Level 4 Card -->
+<div class="card" data-aos="fade-up">
+<h3>Level 4: Correction & Ceramic</h3>
+<div class="price">£650+ (price may vary depending on vehicle)</div>
+<ul>
+<li>Everything included in Levels 1, 2 & 3</li>
+<li>Full paintwork decontamination</li>
+<li>Single-stage machine polish</li>
+<li>Swirl and defect removal</li>
+<li>1-year ceramic coating protection</li>
+</ul>
+<p style="color:#aaa; font-size:14px;">
+A full-day package designed to restore your paintwork and lock in a high-gloss finish with durable ceramic protection.
+</p>
+</div>
+
 </div>
 
 <div class="info-section">
 <h3>Emergency Call Outs</h3>
-<p>We offer emergency call-out detailing services. Pricing depends on time, vehicle, and detail level. Contact us directly for a fast quote.</p>
+<p>We offer emergency call-out detailing services. Pricing depends on the time, vehicle, and level of detail required. Contact us directly for a fast quote.</p>
 
 <h3>Booking Deposit</h3>
 <p>A £75 deposit is required to secure all Level 1–4 bookings.</p>
 </div>
 </section>
 
-<footer id="contact">
-<p>Call: 07946673160 | Email: optimal.car.detailers.uk@gmail.com</p>
-<p style="font-size: 12px;">&copy; 2026 Optimal Car Detailers</p>
+<footer>
+<p>Call: 07946673160</p>
+<p>Email: optimal.car.detailers.uk@gmail.com</p>
+<p style="font-size: 12px; color: #555;">&copy; 2026 Optimal Car Detailers</p>
 </footer>
 
+<!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
 AOS.init({ duration: 1000 });
-
-// Vehicle type filter
-const buttons = document.querySelectorAll('.vehicle-types button');
-const cards = document.querySelectorAll('.card');
-
-buttons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    buttons.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const type = btn.dataset.type;
-    cards.forEach(card => {
-      if(card.dataset.vehicle === type) card.style.display = 'block';
-      else card.style.display = 'none';
-    });
-  });
-});
-
-// Initialize active vehicle
-const activeType = document.querySelector('.vehicle-types button.active').dataset.type;
-cards.forEach(card => { if(card.dataset.vehicle !== activeType) card.style.display='none'; });
 </script>
 
 </body>
